@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://fdo86gp3gd81"]
+
+[ext_resource type="PackedScene" uid="uid://d1o7fbuybjmmf" path="res://scenes/bg.tscn" id="1_16ik0"]
+[ext_resource type="Script" path="res://scripts/help_screen.gd" id="1_apcyu"]
+[ext_resource type="Texture2D" uid="uid://ri6t1fmwy57x" path="res://martian_mike_assets/textures/screens/Screenshot 2025-03-30 at 17.18.08.png" id="2_q0hii"]
+[ext_resource type="FontFile" uid="uid://43y3bwcq7y07" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="3_qqkj4"]
+[ext_resource type="Texture2D" uid="uid://byn12irdv6t41" path="res://martian_mike_assets/textures/screens/Screenshot 2025-03-30 at 17.22.47.png" id="5_40rct"]
+[ext_resource type="Texture2D" uid="uid://c4n1qegggbnge" path="res://martian_mike_assets/textures/screens/Screenshot 2025-03-30 at 17.22.19.png" id="6_16yqj"]
+[ext_resource type="Texture2D" uid="uid://dny10i1kxivam" path="res://martian_mike_assets/textures/screens/Screenshot 2025-03-30 at 17.27.11.png" id="8_4mtte"]
+[ext_resource type="Texture2D" uid="uid://dyphu3lry4drk" path="res://martian_mike_assets/textures/screens/Screenshot 2025-03-30 at 17.28.00.png" id="8_a8sfq"]
+
+[node name="Help_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_apcyu")
+
+[node name="BG" parent="." instance=ExtResource("1_16ik0")]
+
+[node name="Screenshot2025-03-30At17_18_08" type="Sprite2D" parent="."]
+position = Vector2(385, 110)
+scale = Vector2(0.266739, 0.261062)
+texture = ExtResource("2_q0hii")
+
+[node name="Shoot" type="Label" parent="."]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 48.0
+offset_right = 476.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_qqkj4")
+text = "Shoot: SPACEBAR"
+
+[node name="Shoot3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 47.0
+offset_right = 170.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_qqkj4")
+text = "Move: A,D <, >"
+
+[node name="Shoot4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 47.0
+offset_right = 314.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_qqkj4")
+text = "Jump: ^, W"
+
+[node name="Shoot2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.0
+offset_top = 17.0
+offset_right = 82.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_qqkj4")
+text = "Controls & Tips"
+
+[node name="Shoot5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 151.0
+offset_right = 93.0
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_qqkj4")
+theme_override_font_sizes/font_size = 15
+text = "Potions Give 
+powerups 
+Try to pickup them!"
+
+[node name="Screenshot2025-03-30At17_22_47" type="Sprite2D" parent="."]
+position = Vector2(400, 190)
+scale = Vector2(0.188953, 0.192647)
+texture = ExtResource("5_40rct")
+
+[node name="Screenshot2025-03-30At17_22_19" type="Sprite2D" parent="."]
+position = Vector2(227, 110)
+scale = Vector2(0.165236, 0.165691)
+texture = ExtResource("6_16yqj")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -43.0
+offset_right = 33.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_qqkj4")
+text = "Back"
+
+[node name="Screenshot2025-03-30At17_27_11" type="Sprite2D" parent="."]
+position = Vector2(61, 109)
+scale = Vector2(0.133312, 0.18299)
+texture = ExtResource("8_4mtte")
+
+[node name="Screenshot2025-03-30At17_28_00" type="Sprite2D" parent="."]
+position = Vector2(71, 194)
+scale = Vector2(0.269, 0.325521)
+texture = ExtResource("8_a8sfq")
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

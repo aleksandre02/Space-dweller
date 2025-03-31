@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmab7ydtgjc2y"
+path="res://.godot/imported/Going Up.ogg-ba8613affbc18bc063a75c1f77a7bd1d.oggvorbisstr"
+
+[deps]
+
+source_file="res://martian_mike_assets/audio/Going Up.ogg"
+dest_files=["res://.godot/imported/Going Up.ogg-ba8613affbc18bc063a75c1f77a7bd1d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

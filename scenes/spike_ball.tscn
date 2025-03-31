@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://nsh116mhd41b"]
+
+[ext_resource type="Texture2D" uid="uid://ccppb7uid8727" path="res://martian_mike_assets/textures/other/Spiked Ball.png" id="1_2433s"]
+[ext_resource type="Script" path="res://scripts/trap.gd" id="1_cbtet"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o2pyt"]
+radius = 8.08885
+
+[sub_resource type="Animation" id="Animation_lnquo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0u86s"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7l8nk"]
+_data = {
+"RESET": SubResource("Animation_lnquo"),
+"move": SubResource("Animation_0u86s")
+}
+
+[node name="SpikeBall" type="Node2D" groups=["traps"]]
+script = ExtResource("1_cbtet")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 34
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-0.969987, -2.28357e-13)
+texture = ExtResource("1_2433s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 1)
+scale = Vector2(1.23627, 1.16107)
+shape = SubResource("CircleShape2D_o2pyt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7l8nk")
+}
+autoplay = "move"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

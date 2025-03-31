@@ -1,0 +1,410 @@
+[gd_scene load_steps=56 format=3 uid="uid://ea4fhyef2nao"]
+
+[ext_resource type="Texture2D" uid="uid://by30jriiwaac8" path="res://martian_mike_assets/textures/player/Jump (32x32).png" id="1_7x878"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_eeshm"]
+[ext_resource type="Texture2D" uid="uid://c2rnvpowrgs63" path="res://martian_mike_assets/textures/player/Fall (32x32).png" id="2_qbssk"]
+[ext_resource type="Texture2D" uid="uid://dbs4a3wtgcjk" path="res://martian_mike_assets/textures/player/Idle (32x32).png" id="3_1fdvs"]
+[ext_resource type="Texture2D" uid="uid://doi7oygueir47" path="res://martian_mike_assets/textures/player/Run (32x32).png" id="4_2pc0r"]
+[ext_resource type="Texture2D" uid="uid://jxpfyroufg7c" path="res://martian_mike_assets/textures/other/Sprite-0002.png" id="6_urtld"]
+[ext_resource type="Texture2D" uid="uid://bmvuyvitd6rgt" path="res://martian_mike_assets/textures/other/empty_hexagon.png" id="7_6btee"]
+[ext_resource type="Texture2D" uid="uid://blpo8tlkjn0hq" path="res://martian_mike_assets/textures/other/pink_hexagon.png" id="8_1fa3e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eed8b"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epq8y"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ssv"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8itgi"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7prqy"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5xvk"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yf70"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4thi"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5c2x"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6aab"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oe5a"]
+atlas = ExtResource("3_1fdvs")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeen4"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hycit"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2bhr"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvaan"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1qv3"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h26p"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqg0j"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhmfc"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj5bx"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03mjw"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_346dd"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3upb"]
+atlas = ExtResource("4_2pc0r")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ju8tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qbssk")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eed8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epq8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ssv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8itgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7prqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5xvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yf70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4thi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5c2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6aab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oe5a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7x878")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeen4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hycit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2bhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvaan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1qv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h26p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqg0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhmfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj5bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03mjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_346dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3upb")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67yin"]
+
+[sub_resource type="Gradient" id="Gradient_op0gn"]
+colors = PackedColorArray(0, 1, 0.0999999, 0.701961, 0.0126667, 0.38, 0, 0.607843)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2p8ar"]
+gradient = SubResource("Gradient_op0gn")
+
+[sub_resource type="Curve" id="Curve_334t0"]
+min_value = 0.1
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1e-05, 0.404748), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_fui8s"]
+curve = SubResource("Curve_334t0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_idgli"]
+lifetime_randomness = 0.27
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(2.08165e-12, -10, 2.08165e-12)
+emission_shape_scale = Vector3(10, 30, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+direction = Vector3(2.08165e-12, -1, 2.08165e-12)
+spread = 11.91
+initial_velocity_max = 70.79
+gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+scale_min = 1.5
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_fui8s")
+color_ramp = SubResource("GradientTexture1D_2p8ar")
+
+[sub_resource type="Gradient" id="Gradient_iqks3"]
+colors = PackedColorArray(0, 0, 1, 0.439216, 0.0745098, 0, 0.529412, 0.607843)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2j0b0"]
+gradient = SubResource("Gradient_iqks3")
+
+[sub_resource type="Curve" id="Curve_vr681"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_50rm0"]
+curve = SubResource("Curve_vr681")
+
+[sub_resource type="Curve" id="Curve_fwoy2"]
+_data = [Vector2(0.0231788, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m7ocm"]
+curve = SubResource("Curve_fwoy2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4qysc"]
+lifetime_randomness = 0.27
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(2.08165e-12, -10, 2.08165e-12)
+emission_shape_scale = Vector3(10, 30, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+direction = Vector3(2.08165e-12, -1, 2.08165e-12)
+spread = 11.91
+initial_velocity_max = 70.0
+gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+scale_min = 2.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_m7ocm")
+color_ramp = SubResource("GradientTexture1D_2j0b0")
+hue_variation_curve = SubResource("CurveTexture_50rm0")
+
+[sub_resource type="Gradient" id="Gradient_bhyxd"]
+colors = PackedColorArray(0, 0.733333, 1, 0.427451, 0.164706, 1, 1, 0.690196)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4poy5"]
+gradient = SubResource("Gradient_bhyxd")
+
+[sub_resource type="Curve" id="Curve_dmj6w"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_y6tqj"]
+curve = SubResource("Curve_dmj6w")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cqbwj"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(2.08165e-12, -10, 2.08165e-12)
+emission_shape_scale = Vector3(10, 30, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+direction = Vector3(2.08165e-12, -1, 2.08165e-12)
+spread = 11.91
+initial_velocity_max = 70.0
+gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_y6tqj")
+color_ramp = SubResource("GradientTexture1D_4poy5")
+
+[sub_resource type="Gradient" id="Gradient_b0uqo"]
+colors = PackedColorArray(0, 0, 0, 0.792157, 0, 0, 0, 0.607843)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wj4ut"]
+gradient = SubResource("Gradient_b0uqo")
+
+[sub_resource type="Curve" id="Curve_uwmv1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hlnik"]
+curve = SubResource("Curve_uwmv1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uhqd5"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(2.08165e-12, -10, 2.08165e-12)
+emission_shape_scale = Vector3(10, 30, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 0.5, 1)
+direction = Vector3(2.08165e-12, -1, 2.08165e-12)
+spread = 11.91
+initial_velocity_max = 70.0
+gravity = Vector3(0, 98, 0)
+scale_min = 2.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_hlnik")
+color_ramp = SubResource("GradientTexture1D_wj4ut")
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_eeshm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_ju8tw")
+animation = &"jump"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+scale = Vector2(0.691568, 1.00957)
+shape = SubResource("RectangleShape2D_67yin")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_bottom = 300
+
+[node name="jumpboostparticles" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(0, -3)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_idgli")
+lifetime = 0.1
+speed_scale = 0.4
+
+[node name="invincibility particles" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(0, -3)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_4qysc")
+lifetime = 0.1
+speed_scale = 0.4
+
+[node name="speedboost particles" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(0, -3)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_cqbwj")
+lifetime = 0.1
+speed_scale = 0.4
+
+[node name="slowtimeparticles" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(0, -3)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_uhqd5")
+lifetime = 0.1
+speed_scale = 0.4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -8.0
+offset_top = -45.0
+offset_right = 8.0
+offset_bottom = -29.0
+fill_mode = 5
+texture_progress = ExtResource("6_urtld")
+
+[node name="reload_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="PotionProgressBar" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 32.0
+offset_bottom = -24.0
+value = 1.0
+fill_mode = 3
+texture_progress = ExtResource("7_6btee")
+
+[node name="Potion_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="PotionEmpty" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -56)
+texture = ExtResource("8_1fa3e")
+
+[connection signal="timeout" from="reload_timer" to="." method="_on_reload_timer_timeout"]
+[connection signal="timeout" from="Potion_timer" to="." method="_on_potion_timer_timeout"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0xtx36qbfm6n"]
+
+[ext_resource type="Script" path="res://scripts/audio_player.gd" id="1_ebeef"]
+[ext_resource type="AudioStream" uid="uid://dmab7ydtgjc2y" path="res://martian_mike_assets/audio/Going Up.ogg" id="2_p0m8m"]
+
+[node name="AudioPlayer" type="Node"]
+script = ExtResource("1_ebeef")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_p0m8m")
+autoplay = true

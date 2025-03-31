@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://daigvgcohs070"]
+
+[ext_resource type="PackedScene" uid="uid://d1o7fbuybjmmf" path="res://scenes/bg.tscn" id="1_c534r"]
+[ext_resource type="Script" path="res://scripts/startmenu.gd" id="1_qqgml"]
+[ext_resource type="Texture2D" uid="uid://dj3b6wme46gb4" path="res://martian_mike_assets/textures/bg/Pink.png" id="2_38vlo"]
+[ext_resource type="FontFile" uid="uid://43y3bwcq7y07" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="3_kghuu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2bf05"]
+font = ExtResource("3_kghuu")
+font_size = 48
+font_color = Color(0, 0, 1, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Startmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qqgml")
+
+[node name="BG" parent="." instance=ExtResource("1_c534r")]
+bg_texture = ExtResource("2_38vlo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Space dweller"
+label_settings = SubResource("LabelSettings_2bf05")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 31.0
+offset_top = 98.0
+offset_right = 258.0
+offset_bottom = 169.0
+grow_horizontal = 2
+rotation = -0.272115
+theme_override_colors/font_color = Color(1, 0, 0.231373, 1)
+theme_override_fonts/font = ExtResource("3_kghuu")
+theme_override_font_sizes/font_size = 8
+text = "If you liked the game don't
+forget to drop a follow on itch :*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.5
+offset_top = -39.0
+offset_right = 61.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0666667, 1, 0, 0.741176)
+theme_override_fonts/font = ExtResource("3_kghuu")
+theme_override_font_sizes/font_size = 30
+text = "START"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = 91.0
+offset_right = 31.5
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 0.654902)
+theme_override_fonts/font = ExtResource("3_kghuu")
+theme_override_font_sizes/font_size = 20
+text = "EXIT
+"
+
+[node name="Help" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = 32.0
+offset_right = 22.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_kghuu")
+theme_override_font_sizes/font_size = 25
+text = "Help"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]

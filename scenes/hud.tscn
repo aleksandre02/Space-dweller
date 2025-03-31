@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7dubcwll14ka"]
+
+[ext_resource type="FontFile" uid="uid://43y3bwcq7y07" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="1_wnus1"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_x0gro"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lbw0"]
+font = ExtResource("1_wnus1")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x0gro")
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 77.0
+offset_right = 177.0
+offset_bottom = 24.0
+text = "Time:9999"
+label_settings = SubResource("LabelSettings_3lbw0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="death_counter" type="Label" parent="."]
+layout_mode = 1
+offset_left = 300.0
+offset_right = 400.0
+offset_bottom = 24.0
+text = "deaths:"
+label_settings = SubResource("LabelSettings_3lbw0")
+horizontal_alignment = 1
+vertical_alignment = 1
