@@ -21,7 +21,7 @@
 [node name="Level 7" type="Node2D"]
 script = ExtResource("1_msev1")
 next_level = ExtResource("2_ikewd")
-level_time = 128
+level_time = 100
 
 [node name="BG" parent="." instance=ExtResource("1_5id2r")]
 bg_texture = ExtResource("3_dr7rj")
@@ -464,9 +464,6 @@ position = Vector2(2362, -349)
 
 [node name="SpikeBall15" parent="Traps" instance=ExtResource("9_iqikm")]
 position = Vector2(2362, -372)
-
-[node name="SpikeBall18" parent="Traps" instance=ExtResource("9_iqikm")]
-position = Vector2(2992, -234)
 
 [node name="SpikeBall16" parent="Traps" instance=ExtResource("9_iqikm")]
 position = Vector2(2385, -387)

@@ -1,10 +1,11 @@
 extends Node2D
 
-
+#
 
 @export var next_level: PackedScene = null 
 @export var is_final_level:bool = false
 @export var level_time = 30
+@export var secret_level: bool = false
 
 @onready var start = $Start
 @onready var exit = $Exit
@@ -12,6 +13,8 @@ extends Node2D
 @onready var hud = $UILayer/HUD
 @onready var ui_layer = $UILayer
 @onready var win_screen = $UILayer/WinScreen
+@onready var secret_win_screen = $UILayer/secretlevelfinish
+
 
 signal player_took_invincibility
 signal player_took_jump_boost
@@ -60,7 +63,8 @@ func _on_level_timer_timeout():
 	
 func _process(delta):
 	hud.set_death_label(Global.death_counter)
-	win_screen.set_death_label_win_scrn(Global.death_counter)
+	secret_win_screen.set_death_label_win_scrn_secret(Global.death_counter)
+	#secret_win_screen.set_death_label_win_scrn_secret(Global.death_counter)
 	if Input.is_action_just_pressed("pause"):
 		ui_layer.pause_menu()
 	elif Input.is_action_just_pressed("reset"):
@@ -93,7 +97,9 @@ func _on_exit_body_entered(body):
 			#player.active=false
 			win = true
 			await get_tree().create_timer(1.5).timeout
-			if is_final_level:
+			if is_final_level && secret_level:
+				ui_layer.show_secret_win_screen(true)
+			elif is_final_level:
 				ui_layer.show_win_screen(true)
 			else: 
 				get_tree().change_scene_to_packed(next_level)

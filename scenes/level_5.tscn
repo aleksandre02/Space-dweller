@@ -16,9 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://yiovk18uwfoi" path="res://scenes/labelquotes.tscn" id="13_it4dm"]
 
 [node name="Level 5" type="Node2D"]
+position = Vector2(1, 1)
 script = ExtResource("1_1fwlm")
 next_level = ExtResource("2_33xtu")
-level_time = 70
+level_time = 75
 
 [node name="UILayer" parent="." instance=ExtResource("2_efvi2")]
 

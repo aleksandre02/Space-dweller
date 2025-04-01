@@ -20,6 +20,7 @@
 script = ExtResource("1_ell42")
 is_final_level = true
 level_time = 512
+secret_level = true
 
 [node name="BG" parent="." instance=ExtResource("2_ben81")]
 
@@ -36,7 +37,7 @@ position = Vector2(-63, -1288)
 position = Vector2(-279, -1114)
 
 [node name="Start" parent="." instance=ExtResource("7_siw8w")]
-position = Vector2(-14, -1147)
+position = Vector2(-26, -1148)
 
 [node name="Player" parent="." instance=ExtResource("8_dca5y")]
 position = Vector2(253, -470)
@@ -82,7 +83,8 @@ position = Vector2(777, -1219)
 position = Vector2(814, -1218)
 
 [node name="Saw14" parent="Traps" instance=ExtResource("10_cawhy")]
-position = Vector2(898, -1329)
+position = Vector2(1217, -1288)
+scale = Vector2(0.382552, 0.364724)
 
 [node name="Saw15" parent="Traps" instance=ExtResource("10_cawhy")]
 position = Vector2(1655, -1420)
@@ -199,10 +201,10 @@ position = Vector2(-82, -2816)
 position = Vector2(-82, -2858)
 
 [node name="Saw57" parent="Traps" instance=ExtResource("10_cawhy")]
-position = Vector2(-82, -2899)
+position = Vector2(-82, -2908)
 
 [node name="Saw58" parent="Traps" instance=ExtResource("10_cawhy")]
-position = Vector2(-82, -2931)
+position = Vector2(-82, -2950)
 
 [node name="Saw59" parent="Traps" instance=ExtResource("10_cawhy")]
 position = Vector2(-539, -2938)
@@ -248,6 +250,15 @@ position = Vector2(-1312, -2417)
 
 [node name="Saw70" parent="Traps" instance=ExtResource("10_cawhy")]
 position = Vector2(-1349, -2416)
+
+[node name="Saw94" parent="Traps" instance=ExtResource("10_cawhy")]
+position = Vector2(-1256, -2273)
+
+[node name="Saw95" parent="Traps" instance=ExtResource("10_cawhy")]
+position = Vector2(-1227, -2272)
+
+[node name="Saw96" parent="Traps" instance=ExtResource("10_cawhy")]
+position = Vector2(-1181, -2272)
 
 [node name="Saw71" parent="Traps" instance=ExtResource("10_cawhy")]
 position = Vector2(-1388, -2415)
@@ -928,49 +939,19 @@ position = Vector2(-5802, -3563)
 rotation = 1.5708
 
 [node name="SpikeBall130" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6270, -3581)
+position = Vector2(-6505, -3581)
 rotation = 3.14772
 
 [node name="SpikeBall131" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6269, -3581)
+position = Vector2(-6504, -3581)
 rotation = 1.5708
 
 [node name="SpikeBall132" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6270, -3582)
+position = Vector2(-6505, -3582)
 rotation = -1.5708
 
 [node name="SpikeBall133" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6269, -3582)
-
-[node name="SpikeBall134" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6518, -3587)
-rotation = 3.14772
-
-[node name="SpikeBall135" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6517, -3587)
-rotation = 1.5708
-
-[node name="SpikeBall136" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6518, -3588)
-rotation = -1.5708
-
-[node name="SpikeBall137" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-6517, -3588)
-
-[node name="SpikeBall152" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-1912, -1242)
-rotation = 3.14772
-
-[node name="SpikeBall153" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-1911, -1242)
-rotation = 1.5708
-
-[node name="SpikeBall154" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-1912, -1243)
-rotation = -1.5708
-
-[node name="SpikeBall155" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(-1911, -1243)
+position = Vector2(-6504, -3582)
 
 [node name="SpikeBall105" parent="Traps" instance=ExtResource("11_hg0au")]
 position = Vector2(-3024, -3150)
@@ -1068,34 +1049,34 @@ rotation = -1.5708
 position = Vector2(-1965, -2749)
 
 [node name="SpikeBall24" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(872, -1916)
+position = Vector2(1006, -2132)
 rotation = 3.14772
 
 [node name="SpikeBall25" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(898, -1891)
+position = Vector2(1032, -2107)
 rotation = 1.5708
 
 [node name="SpikeBall26" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(898, -1941)
+position = Vector2(1032, -2157)
 rotation = -1.5708
 
 [node name="SpikeBall27" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(922, -1915)
+position = Vector2(1056, -2131)
 
 [node name="SpikeBall44" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(739, -1953)
+position = Vector2(873, -2169)
 rotation = 3.14772
 
 [node name="SpikeBall45" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(765, -1928)
+position = Vector2(899, -2144)
 rotation = 1.5708
 
 [node name="SpikeBall46" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(765, -1978)
+position = Vector2(899, -2194)
 rotation = -1.5708
 
 [node name="SpikeBall47" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(789, -1952)
+position = Vector2(923, -2168)
 
 [node name="SpikeBall48" parent="Traps" instance=ExtResource("11_hg0au")]
 position = Vector2(570, -1960)
@@ -1171,13 +1152,6 @@ position = Vector2(634, -2472)
 position = Vector2(633, -2471)
 rotation = 3.14159
 
-[node name="SpikeBall79" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(634, -2503)
-
-[node name="SpikeBall80" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(633, -2502)
-rotation = 3.14159
-
 [node name="SpikeBall49" parent="Traps" instance=ExtResource("11_hg0au")]
 position = Vector2(596, -1935)
 rotation = 1.5708
@@ -1221,10 +1195,6 @@ rotation = -3.14159
 [node name="SpikeBall14" parent="Traps" instance=ExtResource("11_hg0au")]
 position = Vector2(1240, -1265)
 rotation = -1.5708
-
-[node name="SpikeBall12" parent="Traps" instance=ExtResource("11_hg0au")]
-position = Vector2(1216, -1290)
-rotation = -3.30565
 
 [node name="SpikeBall5" parent="Traps" instance=ExtResource("11_hg0au")]
 position = Vector2(600, -1230)

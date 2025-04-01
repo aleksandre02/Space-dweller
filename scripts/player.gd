@@ -80,7 +80,7 @@ func _physics_process(delta):
 		jump_count = max_jump_count
 	var direction = 0
 	
-	if Input.is_action_just_pressed("jump") && (is_on_floor() || jump_count != 0):
+	if Input.is_action_just_pressed("jump") && (is_on_floor() || jump_count > 0):
 		jump(jump_force)
 		
 	direction = Input.get_axis("move_left", "move_right")

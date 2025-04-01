@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c13h08fak34p2"]
+[gd_scene load_steps=6 format=3 uid="uid://c13h08fak34p2"]
 
 [ext_resource type="Script" path="res://scripts/ui_layer.gd" id="1_6w16o"]
 [ext_resource type="PackedScene" uid="uid://c7dubcwll14ka" path="res://scenes/hud.tscn" id="1_v658a"]
+[ext_resource type="PackedScene" uid="uid://0jnfawjg5hrp" path="res://scenes/secretlevelfinish.tscn" id="2_o7x5w"]
 [ext_resource type="PackedScene" uid="uid://d0y2nfo56tum5" path="res://scenes/win_screen.tscn" id="3_v8iuu"]
 [ext_resource type="FontFile" uid="uid://43y3bwcq7y07" path="res://martian_mike_assets/fonts/Kenney Pixel Square.ttf" id="4_uoxj1"]
 
@@ -11,6 +12,9 @@ script = ExtResource("1_6w16o")
 [node name="HUD" parent="." instance=ExtResource("1_v658a")]
 
 [node name="WinScreen" parent="." instance=ExtResource("3_v8iuu")]
+visible = false
+
+[node name="secretlevelfinish" parent="." instance=ExtResource("2_o7x5w")]
 visible = false
 
 [node name="Pause" type="Control" parent="."]

@@ -7,6 +7,9 @@ var paused = false
 func show_win_screen(flag: bool):
 	$WinScreen.visible = flag
 	
+	
+func show_secret_win_screen(flag: bool):
+	$secretlevelfinish.visible = flag
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://scenes/startmenu.tscn")
 

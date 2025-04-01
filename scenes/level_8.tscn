@@ -21,7 +21,7 @@
 [node name="Level_8" type="Node2D"]
 script = ExtResource("1_erd2k")
 next_level = ExtResource("2_ogrg2")
-level_time = 120
+level_time = 175
 
 [node name="BG" parent="." instance=ExtResource("2_s8wmq")]
 bg_texture = ExtResource("3_qxecy")
@@ -38,7 +38,7 @@ position = Vector2(2, -456)
 position = Vector2(3818, -1776)
 
 [node name="Start" parent="." instance=ExtResource("7_421l7")]
-position = Vector2(523, -446)
+position = Vector2(584, -448)
 
 [node name="Player" parent="." instance=ExtResource("8_fxsjv")]
 position = Vector2(373, -604)
@@ -140,7 +140,7 @@ position = Vector2(16, -1689)
 position = Vector2(15, -1723)
 
 [node name="Saw21" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(14, -1777)
+position = Vector2(14, -1785)
 
 [node name="Saw22" parent="traps" instance=ExtResource("10_ffc56")]
 position = Vector2(119, -1789)
@@ -179,40 +179,40 @@ position = Vector2(606, -2006)
 position = Vector2(610, -2040)
 
 [node name="Saw34" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(696, -1950)
+position = Vector2(686, -1950)
 
 [node name="Saw35" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(695, -1990)
+position = Vector2(685, -1990)
 
 [node name="Saw36" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(694, -2029)
+position = Vector2(684, -2029)
 
 [node name="Saw37" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(724, -1970)
+position = Vector2(714, -1970)
 
 [node name="Saw38" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(722, -2006)
+position = Vector2(712, -2006)
 
 [node name="Saw39" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(726, -2040)
+position = Vector2(716, -2040)
 
 [node name="Saw40" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(813, -1952)
+position = Vector2(796, -1952)
 
 [node name="Saw41" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(812, -1992)
+position = Vector2(795, -1992)
 
 [node name="Saw42" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(811, -2031)
+position = Vector2(794, -2031)
 
 [node name="Saw43" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(841, -1972)
+position = Vector2(824, -1972)
 
 [node name="Saw44" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(839, -2008)
+position = Vector2(822, -2008)
 
 [node name="Saw45" parent="traps" instance=ExtResource("10_ffc56")]
-position = Vector2(843, -2042)
+position = Vector2(826, -2042)
 
 [node name="Saw46" parent="traps" instance=ExtResource("10_ffc56")]
 position = Vector2(1384, -1896)
@@ -557,7 +557,7 @@ position = Vector2(-226, -829)
 position = Vector2(-227, -849)
 
 [node name="SpikeBall13" parent="traps" instance=ExtResource("11_kvbo4")]
-position = Vector2(-45, -880)
+position = Vector2(-45, -873)
 
 [node name="SpikeBall14" parent="traps" instance=ExtResource("11_kvbo4")]
 position = Vector2(-45, -899)
@@ -672,7 +672,7 @@ position = Vector2(-138, -1201)
 position = Vector2(-260, -1225)
 
 [node name="SpikeBall26" parent="traps" instance=ExtResource("11_kvbo4")]
-position = Vector2(-261, -1241)
+position = Vector2(-261, -1249)
 
 [node name="SpikeBall27" parent="traps" instance=ExtResource("11_kvbo4")]
 position = Vector2(-374, -1279)
@@ -705,7 +705,7 @@ position = Vector2(79, -1784)
 position = Vector2(1130, -1946)
 
 [node name="invincibilityPotion" parent="." instance=ExtResource("14_5n6e3")]
-position = Vector2(-834, -1453)
+position = Vector2(-801, -1453)
 
 [node name="Labelquotes" parent="." instance=ExtResource("16_o7ga3")]
 offset_left = 3349.0

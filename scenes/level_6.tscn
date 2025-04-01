@@ -23,10 +23,10 @@ next_level = ExtResource("2_abv26")
 level_time = 80
 
 [node name="Labelquotes" parent="." instance=ExtResource("2_f6t4c")]
-offset_left = 2947.0
-offset_top = -970.0
-offset_right = 3895.0
-offset_bottom = -712.0
+offset_left = 2773.0
+offset_top = -976.0
+offset_right = 3721.0
+offset_bottom = -718.0
 text = "What is right is not always popular, and what is popular is not always right
 -Albert Einstein"
 
